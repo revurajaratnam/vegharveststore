@@ -27,7 +27,7 @@ export default function Navbar({ onOpenAuth, onNavigate, currentView }) {
             <Leaf className="w-5 h-5" />
           </div>
           <span className="text-xl font-bold tracking-tight text-slate-900">
-            Fresh<span className="text-emerald-600">Harvest</span>
+            Veg<span className="text-emerald-600">Harvest</span>
           </span>
         </button>
 

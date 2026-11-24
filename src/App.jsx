@@ -4,13 +4,15 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FilterBar from './components/FilterBar';
 import ProductGrid from './components/ProductGrid';
-import CartDrawer from './components/cartDrawer';
+import CartDrawer from './components/CartDrawer';
 import UserDashboard from './components/UserDashboard';
 import AdminDashboard from './components/AdminDashboard';
 import AuthModal from './components/AuthModal';
 import { selectCurrentUser } from './store/slices/authSlice';
 import { toggleCart } from './store/slices/cartSlice';
 import ToastContainer from './components/ToastContainer';
+
+const currentYear = new Date().getFullYear();
 
 export default function App() {
   const dispatch = useDispatch();
@@ -75,7 +77,7 @@ export default function App() {
       )}
 
       <footer className="bg-white border-t border-slate-200 py-6 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} FreshHarvest Organics. All rights reserved.
+        © {currentYear} VegHarvest Organics. All rights reserved.
       </footer>
 
       {/* Cart Drawer wired to open AuthModal when guest clicks Buy Now */}
@@ -87,9 +89,7 @@ export default function App() {
         onClose={handleCloseAuth}
         onAuthSuccess={handleAuthSuccess}
       />
-      <CartDrawer onRequireAuth={handleRequireAuthFromCart} />
-<AuthModal isOpen={isAuthOpen} onClose={handleCloseAuth} onAuthSuccess={handleAuthSuccess} />
-<ToastContainer />
+      <ToastContainer />
     </div>
   );
 }
