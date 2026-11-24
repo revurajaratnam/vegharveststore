@@ -49,6 +49,7 @@ export default function Navbar({ onOpenAuth, onNavigate, currentView }) {
             >
               <X className="w-4 h-4" />
             </button>
+          
           )}
         </div>
 
@@ -102,6 +103,7 @@ export default function Navbar({ onOpenAuth, onNavigate, currentView }) {
             )}
           </button>
         </div>
+        <p></p>
       </div>
     </header>
   );
